@@ -22,28 +22,28 @@ var content= event.results[0][0].transcript;
 
 document.getElementById("status").innerHTML="The speech has been recognized as: " + content;
 
-if(content=="Circle"){
+if(content=="circle"){
     x= Math.floor(Math.random()*900);
     y= Math.floor(Math.random()*500);
     document.getElementById("status").innerHTML="Started drawing circle.";
     draw_circle="set";   
 }
 
-if(content=="Rectangle"){
+if(content=="rectangle"){
     x= Math.floor(Math.random()*900);
     y= Math.floor(Math.random()*500);
     document.getElementById("status").innerHTML="Started drawing rectangle.";
     draw_rect="set";   
 }
 
-if(content=="Square"){
+if(content=="square"){
     x= Math.floor(Math.random()*900);
     y= Math.floor(Math.random()*500);
     document.getElementById("status").innerHTML="Started drawing square.";
     draw_square="set";   
 }
 
-if(content=="Ellipse"){
+if(content=="ellipse"){
     x= Math.floor(Math.random()*900);
     y= Math.floor(Math.random()*500);
     document.getElementById("status").innerHTML="Started drawing ellipse.";
@@ -81,7 +81,7 @@ function draw(){
 
     if (draw_square=="set"){
         
-        square(x, y, 100, 100);
+        rect(x, y, 100, 100);
         document.getElementById("status").innerHTML="Square drawn";
         draw_square="";
         
@@ -89,7 +89,7 @@ function draw(){
 
     if (draw_ellipse=="set"){
         
-        ellipse(x, y, 80, 80);
+        ellipse(x, y, 150, 80);
         document.getElementById("status").innerHTML="Ellipse drawn";
         draw_ellipse="";
         
@@ -97,7 +97,7 @@ function draw(){
 
     if (draw_triangle=="set"){
         
-        triangle(x, y, 320, 100, 310, 80);
+        triangle(x, y, x+50, y+20, 310, 350);
         document.getElementById("status").innerHTML="Triangle drawn";
         draw_triangle="";
         
