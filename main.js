@@ -64,6 +64,7 @@ function setup(){
 
 function draw(){
     if (draw_circle=="set"){
+        fill("green");
         radius= Math.floor(Math.random()*200);
         circle(x, y, radius);
         document.getElementById("status").innerHTML="Circle drawn";
@@ -72,7 +73,7 @@ function draw(){
     }
 
     if (draw_rect=="set"){
-        
+        fill("red");
         rect(x, y, 100, 80);
         document.getElementById("status").innerHTML="Rectangle drawn";
         draw_rect="";
@@ -80,7 +81,7 @@ function draw(){
     }
 
     if (draw_square=="set"){
-        
+        fill("orange");
         rect(x, y, 100, 100);
         document.getElementById("status").innerHTML="Square drawn";
         draw_square="";
@@ -88,7 +89,7 @@ function draw(){
     }
 
     if (draw_ellipse=="set"){
-        
+        fill("yellow");
         ellipse(x, y, 150, 80);
         document.getElementById("status").innerHTML="Ellipse drawn";
         draw_ellipse="";
@@ -96,7 +97,7 @@ function draw(){
     }
 
     if (draw_triangle=="set"){
-        
+        fill("blue");
         triangle(x, y, x+50, y+20, 310, 350);
         document.getElementById("status").innerHTML="Triangle drawn";
         draw_triangle="";
